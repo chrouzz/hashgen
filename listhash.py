@@ -1,8 +1,23 @@
+# -*- coding: utf-8 -*-
+
 import hashlib
 import base64
+import sys
 import itertools
+import requests   #add this module to directly send the request
+import pprint
 
-mode = 2  
+mode = 1  
+separator_char = b" "  #what we use to separate the different data
+myName = "chrouzz"
+myEmail = "chrouzz@gmail.com"
+pp = pprint.PrettyPrinter(indent=4)
+headers = {
+	'User-Agent': 'Mozilla/5.0 (Windows NT 5.1; rv:20.0) Gecko/20100101 Firefox/20.0',
+	'Content-Type': 'application/x-www-form-urlencoded',
+}
+
+s = requests.Session()
 
 if mode == 1:
 
@@ -35,20 +50,25 @@ with open("hashlist.txt","w") as f:
 	#take a list of permuted elements
 	for x in hash_test:
 		first = True
-		withoutSpace = b""
-		withSpace = b""
+		withSeparator = b""
 		#happen elements in one line
 		for y in x:
 			if first:
 				first = False
-				withoutSpace += y
-				withSpace += y
+				withSeparator += y
 			else:
-				withoutSpace += y
-				withSpace +=  b" "  + y
-		f.write("without space\n")
-		f.write(hashlib.sha256(withoutSpace).hexdigest() + "\n")
-		f.write("with space\n")
-		f.write(hashlib.sha256(withSpace).hexdigest() + "\n\n")
+				withSeparator +=  separator_char  + y
+		postdata = {
+			"form-name" : myName,
+			"form-email" : myEmail,
+			"message" : hashlib.sha256(withSeparator).hexdigest()
+		}
+
+		q = s.post('https://bitcoinchallenge.codes/register-310/', headers=headers, data=postdata)
+		print(q.status_code)
+		pp.pprint(q)
+		f.write("Log with separator\n")
+		f.write(hashlib.sha256(withSeparator).hexdigest() + "\n\n")
+		sys.exit()
 
 
