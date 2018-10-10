@@ -1,4 +1,4 @@
-# solve btc310 riddle
+# solve btc310 riddle step 2 and form registration
 
 1)According to Pip, one's must resolve 0.1BTC in order to register to the form.
 
