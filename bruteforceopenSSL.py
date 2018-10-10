@@ -47,7 +47,7 @@ seeds2 = b"cry buyer grain save vault sign lyrics rhythm music fury horror mansi
 
 # shasum256_challengezip = b"798ffc7b55fc1c529d9f77ec5a88dcdc8a656c42cd0866815eae2266ef84f57b" #shasum256 challenge.enc
 
-all_data_list = [pvk1, pvk2, password_b64_data, b64_data, b64_data_unzip]
+all_data_list = ["K", "D", "F", "6", "4", "C", "1", "0", "E", "A", "D", "9"]
 # all_data_list = [1, 2, 3, 4, 5, 6 ]
 
 # if mode == 1:
