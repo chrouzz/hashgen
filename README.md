@@ -33,6 +33,11 @@ shasum256   challenge.enc 37fad2f9db9b74dc8fd920685925c725ba41b88c4a5e0885bbc43d
 shasum256   challengezip.enc 798ffc7b55fc1c529d9f77ec5a88dcdc8a656c42cd0866815eae2266ef84f57b  (from unzipped base64 data)
 
 
+
+
+bruteforce-salted-openssl package
+
+
 ### If you liked the help
 
 tips to: 0xD399D795f218275B73429d696Ecc20b40a0dDA1f
