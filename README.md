@@ -7,4 +7,6 @@
 
 this is a function to generate sha256 hashes which is a combination of current existing data.
 
+change the value of the variable mode in order to execute a different set of data
+
 tips to: 0xD399D795f218275B73429d696Ecc20b40a0dDA1f
