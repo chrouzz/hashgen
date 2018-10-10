@@ -10,11 +10,11 @@ import time
 
 # PARAMETERS
 
-mode = 4  
+# mode = 4  
 separator_char = b" "  #what we use to separate the different data
-myName = "chrouzz"
-myEmail = "chrouzz@gmail.com"
-sublist_size = 2
+myName = "yourname"
+myEmail = "youremail"
+sublist_size = 3
 
 
 
@@ -44,40 +44,41 @@ shasum256_challengezip = b"798ffc7b55fc1c529d9f77ec5a88dcdc8a656c42cd0866815eae2
 all_data_list = [pvk1, b64_data, b64_data_unzip, seeds, shasum256_challenge, shasum256_challengezip ]
 # all_data_list = [1, 2, 3, 4, 5, 6 ]
 
-if mode == 1:
+# if mode == 1:
 
-	s1 = pvk1
-	s2 = b64_data
-	s3 = b64_data_unzip
+# 	s1 = pvk1
+# 	s2 = b64_data
+# 	s3 = b64_data_unzip
 
-	form_data = [s1, s2, s3]
+# 	form_data = [s1, s2, s3]
 
-elif mode == 2:
-	s1 = seeds
-	s2 = b64_data
-	s3 = b64_data_unzip
+# elif mode == 2:
+# 	s1 = seeds
+# 	s2 = b64_data
+# 	s3 = b64_data_unzip
 
-	form_data = [s1, s2, s3]
+# 	form_data = [s1, s2, s3]
 
-elif mode == 3:
-	s1 = pvk1
-	s2 = shasum256_challenge
-	s3 = shasum256_challengezip
+# elif mode == 3:
+# 	s1 = pvk1
+# 	s2 = shasum256_challenge
+# 	s3 = shasum256_challengezip
 
-	form_data = [s1, s2, s3]
+# 	form_data = [s1, s2, s3]
 
-elif mode == 4:
-	s1 = seeds
-	s2 = shasum256_challenge
-	s3 = shasum256_challengezip
+# elif mode == 4:
+# 	s1 = seeds
+# 	s2 = shasum256_challenge
+# 	s3 = shasum256_challengezip
 
-	form_data = [s1, s2, s3]
+# 	form_data = [s1, s2, s3]
+
+
+
+
 
 # create a list of permutation of elements within  the form_data list  
 #ex  [[s1, s2, s3], [s1, s3, s2], [s2, s1, s3]...........]
-
-
-
 all_sublist_with_size_element = list(itertools.permutations(all_data_list, 2))
 
 print(all_sublist_with_size_element)
