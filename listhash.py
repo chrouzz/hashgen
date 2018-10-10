@@ -66,9 +66,15 @@ with open("hashlist.txt","w") as f:
 
 		q = s.post('https://bitcoinchallenge.codes/register-310/', headers=headers, data=postdata)
 		print(q.status_code)
-		pp.pprint(q)
-		f.write("Log with separator\n")
-		f.write(hashlib.sha256(withSeparator).hexdigest() + "\n\n")
-		sys.exit()
+		print("\n")
+		print(withSeparator)
+		# dont find the error message is a win!!!!
+		if(q.text.find("Your SHA256 hash is unknown to me. You've got more work to do") == -1):
+			print("success with the hash:" + hashlib.sha256(withSeparator).hexdigest())
+			f.write(hashlib.sha256(withSeparator).hexdigest() + "\n\n")
+		else:
+			print("failed")
+
+		# sys.exit()
 
 
