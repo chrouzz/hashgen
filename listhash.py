@@ -36,10 +36,6 @@ with open("hashlist.txt","w") as f:
 			else:
 				withoutSpace += y
 				withSpace +=  b" "  + y
-		print(withoutSpace)
-		print("\n")
-		print(withSpace)
-		print("\n\n")
 		f.write("without space\n")
 		f.write(hashlib.sha256(withoutSpace).hexdigest() + "\n")
 		f.write("with space\n")
