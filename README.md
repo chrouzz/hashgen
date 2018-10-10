@@ -9,4 +9,8 @@ this is a function to generate sha256 hashes which is a combination of current e
 
 change the value of the variable mode in order to execute a different set of data
 
+
+shasum256   challenge.enc 37fad2f9db9b74dc8fd920685925c725ba41b88c4a5e0885bbc43d75fb369f81
+shasum256   challengezip.enc 798ffc7b55fc1c529d9f77ec5a88dcdc8a656c42cd0866815eae2266ef84f57b
+
 tips to: 0xD399D795f218275B73429d696Ecc20b40a0dDA1f
