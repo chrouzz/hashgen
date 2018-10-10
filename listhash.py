@@ -26,14 +26,18 @@ elif mode == 3:
 
 	form_data = [s1, s2, s3]
 
+# create a list of permutation of elements within  the form_data list  
+#ex  [[s1, s2, s3], [s1, s3, s2], [s2, s1, s3]...........]
 
 hash_test = list(itertools.permutations(form_data))
 
 with open("hashlist.txt","w") as f:
+	#take a list of permuted elements
 	for x in hash_test:
 		first = True
 		withoutSpace = b""
 		withSpace = b""
+		#happen elements in one line
 		for y in x:
 			if first:
 				first = False
